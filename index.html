@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Hygia Pro Service - Expert en remise en état locative professionnelle B2B pour agences immobilières, administrateurs de biens et gestionnaires locatifs en Île-de-France.">
+  <meta name="keywords"
+    content="remise en état locative, nettoyage professionnel B2B, agences immobilières, Île-de-France, Paris, gestion locative">
+  <meta property="og:title" content="Hygia Pro Service - Remise en État Locative B2B">
+  <meta property="og:description"
+    content="Votre partenaire de confiance pour la remise en état rapide, fiable et traçable des logements entre deux locations.">
+  <meta property="og:type" content="website">
+  <title>Hygia Pro Service | Remise en État Locative Professionnelle B2B - Île-de-France</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      /* Palette Bleu médical (pro + rassurant) */
+      --primary-navy: #0B2A4A;
+      --primary-blue: #0E4C8A;
+      --accent-gold: #E6F2FF;
+      --accent-blue: #1B74D1;
+      --success-green: #1F8A5B;
+
+      /* Neutrals */
+      --gray-900: #1A1F2E;
+      --gray-800: #2C3442;
+      --gray-700: #4A5568;
+      --gray-600: #718096;
+      --gray-400: #A0AEC0;
+      --gray-200: #E2E8F0;
+      --gray-100: #F7FAFC;
+      --white: #FFFFFF;
+
+      /* Shadows & Effects */
+      --shadow-sm: 0 1px 3px rgba(10, 37, 64, 0.08);
+      --shadow-md: 0 4px 12px rgba(10, 37, 64, 0.12);
+      --shadow-lg: 0 12px 32px rgba(10, 37, 64, 0.15);
+      --shadow-xl: 0 24px 48px rgba(10, 37, 64, 0.2);
+
+      /* Typography */
+      --font-display: 'Plus Jakarta Sans', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      --font-body: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+      /* Ajouts système léger */
+      --radius-sm: 8px;
+      --radius-md: 12px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      line-height: 1.7;
+      color: var(--gray-800);
+      background: var(--white);
+      overflow-x: hidden;
+      padding-bottom: 0;
+    }
+
+    /* Typography */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-display);
+      font-weight: 800;
+      line-height: 1.15;
+      color: var(--primary-navy);
+    }
+    h1 { font-size: clamp(2rem, 3.2vw + 1rem, 3.5rem); letter-spacing: -0.02em; }
+    h2 { font-size: clamp(1.75rem, 2.2vw + 1rem, 2.75rem); letter-spacing: -0.01em; }
+    h3 { font-size: 1.75rem; }
+    h4 { font-size: 1.35rem; }
+
+    /* A11y: skip link */
+    .skip-link {
+      position: absolute;
+      top: 0.75rem;
+      left: 0.75rem;
+      z-index: 2000;
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius-sm);
+      background: var(--primary-navy);
+      color: var(--white);
+      text-decoration: none;
+      transform: translateY(-140%);
+      transition: transform 0.2s ease;
+    }
+    .skip-link:focus { transform: translateY(0); outline: none; }
+
+    /* Focus visible cohérent */
+    :focus-visible {
+      outline: 3px solid rgba(27, 116, 209, 0.55);
+      outline-offset: 3px;
+      border-radius: 8px;
+    }
+
+    /* Header & Navigation */
+    .header {
+      background: var(--white);
+      border-bottom: 1px solid var(--gray-200);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(8px);
+      background: rgba(255, 255, 255, 0.95);
+    }
+    .nav-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 1.25rem 2.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      background: linear-gradient(135deg, var(--primary-navy) 0%, var(--accent-blue) 100%);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-weight: 900;
+      font-size: 1.2rem;
+      font-family: var(--font-display);
+    }
+    .logo-text { display: flex; flex-direction: column; }
+    .logo-text .brand {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--primary-navy);
+      line-height: 1;
+    }
+    .logo-text .tagline {
+      font-size: 0.7rem;
+      color: var(--gray-600);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 0.15rem;
+    }
+    .nav-actions { display: flex; gap: 1.5rem; align-items: center; }
+    .phone-link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--primary-navy);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 0.625rem 1.25rem;
+      border: 1.5px solid var(--gray-200);
+      border-radius: var(--radius-sm);
+      transition: all 0.3s ease;
+    }
+    .phone-link:hover {
+      background: var(--gray-100);
+      border-color: rgba(27, 116, 209, 0.45);
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.875rem 1.75rem;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      font-family: var(--font-body);
+      letter-spacing: 0.01em;
+    }
+    .btn-primary { background: var(--accent-blue); color: var(--white); }
+    .btn-primary:hover { background: #155FB0; transform: translateY(-1px); box-shadow: var(--shadow-md); }
+    .btn-secondary { background: var(--white); color: var(--primary-navy); border: 1.5px solid var(--primary-navy); }
+    .btn-secondary:hover { background: var(--primary-navy); color: var(--white); }
+    .btn-outline { background: transparent; color: var(--white); border: 1.5px solid rgba(255, 255, 255, 0.85); }
+    .btn-outline:hover { background: var(--white); color: var(--primary-navy); border-color: var(--white); }
+    .btn-block { width: 100%; }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      background: linear-gradient(165deg, var(--primary-navy) 0%, var(--primary-blue) 55%, var(--accent-blue) 115%);
+      color: var(--white);
+      /* MODIF: bloc hero plus haut */
+      padding-top: 2.75rem;
+      padding-right: 2.5rem;
+      padding-bottom: 4.25rem;
+      padding-left: 2.5rem;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 20% 50%, rgba(230, 242, 255, 0.10) 0%, transparent 55%),
+        radial-gradient(circle at 80% 80%, rgba(27, 116, 209, 0.12) 0%, transparent 55%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40%;
+      height: 100%;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="400" height="600" fill="url(%23grid)"/></svg>');
+      opacity: 0.4;
+    }
+    .hero-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      /* MODIF: rapproche contenu et formulaire */
+      gap: 2.5rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-content h1 {
+      color: var(--white);
+      font-size: clamp(2.15rem, 3.3vw + 1rem, 3.5rem);
+      margin-bottom: 1.25rem;
+      line-height: 1.12;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.4rem 0.85rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      color: rgba(255, 255, 255, 0.92);
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      margin-bottom: 1rem;
+      backdrop-filter: blur(8px);
+    }
+    .hero-subtitle {
+      font-size: clamp(1.05rem, 0.8vw + 0.95rem, 1.25rem);
+      color: rgba(255, 255, 255, 0.92);
+      margin-bottom: 2.25rem;
+      line-height: 1.65;
+      font-weight: 500;
+      max-width: 62ch;
+    }
+    .hero-features {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 2.25rem;
+      flex-wrap: wrap;
+    }
+    .hero-feature { display: flex; align-items: center; gap: 0.75rem; }
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .feature-text { display: flex; flex-direction: column; }
+    .feature-value {
+      font-size: 1.75rem;
+      font-weight: 900;
+      color: rgba(230, 242, 255, 0.96);
+      line-height: 1;
+    }
+    .feature-label {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.85);
+      margin-top: 0.25rem;
+      font-weight: 600;
+    }
+    .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+    /* Form Card */
+    .form-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-xl);
+      border: 1px solid rgba(10, 37, 64, 0.08);
+    }
+    .form-header { margin-bottom: 2rem; }
+    .form-header h3 {
+      font-size: 1.6rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary-navy);
+      font-weight: 900;
+    }
+    .form-header p { color: var(--gray-600); font-size: 0.95rem; font-weight: 500; }
+    .form-group { margin-bottom: 1.5rem; }
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: var(--gray-700);
+      font-weight: 800;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.875rem 1rem;
+      border: 1.5px solid var(--gray-200);
+      border-radius: var(--radius-sm);
+      font-size: 1rem;
+      font-family: var(--font-body);
+      transition: all 0.3s ease;
+      background: var(--white);
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: rgba(27, 116, 209, 0.65);
+      box-shadow: 0 0 0 3px rgba(27, 116, 209, 0.12);
+    }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-note { font-size: 0.85rem; color: var(--gray-600); text-align: center; margin-top: 1.25rem; line-height: 1.5; }
+
+    .success-alert {
+      background: var(--success-green);
+      color: var(--white);
+      padding: 1rem 1.25rem;
+      border-radius: var(--radius-sm);
+      margin-bottom: 1.5rem;
+      display: none;
+      font-weight: 800;
+    }
+    .success-alert.show { display: block; animation: slideDown 0.4s ease; }
+
+    .error-alert {
+      background: #B42318;
+      color: var(--white);
+      padding: 1rem 1.25rem;
+      border-radius: var(--radius-sm);
+      margin-bottom: 1.5rem;
+      display: none;
+      font-weight: 800;
+    }
+    .error-alert.show { display: block; animation: slideDown 0.4s ease; }
+
+    .form-group input:invalid,
+    .form-group select:invalid,
+    .form-group textarea:invalid { border-color: rgba(180, 35, 24, 0.55); }
+
+    .form-group input:invalid:focus,
+    .form-group select:invalid:focus,
+    .form-group textarea:invalid:focus { box-shadow: 0 0 0 3px rgba(180, 35, 24, 0.12); }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Trust Bar */
+    .trust-bar {
+      background: var(--gray-100);
+      padding: 2rem 2.5rem;
+      border-top: 1px solid var(--gray-200);
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .trust-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+    }
+    .trust-item { display: flex; align-items: center; gap: 1rem; }
+    .trust-icon {
+      width: 56px;
+      height: 56px;
+      background: var(--white);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.75rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--gray-200);
+    }
+    .trust-text { display: flex; flex-direction: column; }
+    .trust-value {
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--primary-navy);
+      font-family: var(--font-display);
+      line-height: 1;
+    }
+    .trust-label { font-size: 0.9rem; color: var(--gray-600); margin-top: 0.25rem; font-weight: 600; }
+
+    /* Section Styling */
+    .section { padding: clamp(3.5rem, 5vw, 6rem) 2.5rem; }
+    .section-alt { background: var(--gray-100); }
+    .section-header { text-align: center; max-width: 800px; margin: 0 auto clamp(2.5rem, 4vw, 4rem); }
+    .section-label {
+      display: inline-block;
+      background: rgba(27, 116, 209, 0.10);
+      color: var(--primary-navy);
+      padding: 0.5rem 1.25rem;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.25rem;
+      border: 1px solid rgba(27, 116, 209, 0.18);
+    }
+    .section-header h2 { margin-bottom: 1.25rem; }
+    .section-description { font-size: 1.15rem; color: var(--gray-600); line-height: 1.7; font-weight: 500; }
+    .container { max-width: 1280px; margin: 0 auto; }
+
+    /* Services Grid */
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem; }
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-md);
+      padding: 2.5rem;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 0;
+      background: var(--accent-blue);
+      transition: height 0.4s ease;
+    }
+    .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: rgba(27, 116, 209, 0.22); }
+    .service-card:hover::before { height: 100%; }
+    .service-icon {
+      width: 72px;
+      height: 72px;
+      background: linear-gradient(135deg, var(--primary-navy), var(--accent-blue));
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: var(--white);
+      margin-bottom: 1.75rem;
+    }
+    .service-card h3 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--primary-navy); font-weight: 900; }
+    .service-description { color: var(--gray-600); margin-bottom: 1.5rem; line-height: 1.7; font-weight: 500; }
+    .service-features { list-style: none; }
+    .service-features li {
+      padding: 0.625rem 0;
+      padding-left: 1.75rem;
+      position: relative;
+      color: var(--gray-700);
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+    .service-features li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--success-green);
+      font-weight: 900;
+      font-size: 1.1rem;
+    }
+
+    /* Value Proposition */
+    .value-prop {
+      background: linear-gradient(135deg, var(--primary-navy) 0%, var(--accent-blue) 100%);
+      color: var(--white);
+      padding: 6rem 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .value-prop::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(230, 242, 255, 0.16) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .value-container { max-width: 1280px; margin: 0 auto; position: relative; z-index: 1; }
+    .value-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; margin-top: 3rem; }
+    .value-item { text-align: center; }
+    .value-number {
+      font-size: 3.5rem;
+      font-weight: 900;
+      color: rgba(230, 242, 255, 0.96);
+      line-height: 1;
+      font-family: var(--font-display);
+      margin-bottom: 1rem;
+    }
+    .value-title { font-size: 1.35rem; font-weight: 900; margin-bottom: 0.75rem; color: var(--white); }
+    .value-description { color: rgba(255, 255, 255, 0.88); line-height: 1.6; font-weight: 500; }
+
+    /* Process Section */
+    .process-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; }
+    .process-step {
+      background: var(--white);
+      padding: 2.5rem 2rem;
+      border-radius: var(--radius-md);
+      text-align: center;
+      border: 1px solid var(--gray-200);
+      transition: all 0.3s ease;
+    }
+    .process-step:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
+    .step-number {
+      width: 64px;
+      height: 64px;
+      background: var(--primary-navy);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.75rem;
+      font-weight: 900;
+      font-family: var(--font-display);
+      margin: 0 auto 1.5rem;
+      box-shadow: var(--shadow-md);
+    }
+    .process-step h3 { margin-bottom: 1rem; font-size: 1.3rem; font-weight: 900; }
+    .process-step p { color: var(--gray-600); line-height: 1.6; font-weight: 500; }
+
+    /* Pricing Section */
+    .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1100px; margin: 0 auto; }
+    .pricing-card {
+      background: var(--white);
+      border: 2px solid var(--gray-200);
+      border-radius: var(--radius-md);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    .pricing-card.featured { border-color: rgba(27, 116, 209, 0.35); box-shadow: var(--shadow-lg); transform: scale(1.05); }
+    .pricing-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+    .pricing-badge {
+      background: rgba(27, 116, 209, 0.12);
+      color: var(--primary-navy);
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      border: 1px solid rgba(27, 116, 209, 0.18);
+    }
+    .pricing-card h3 { font-size: 1.5rem; margin-bottom: 0.75rem; color: var(--primary-navy); font-weight: 900; }
+    .pricing-amount { font-size: 2.75rem; font-weight: 900; color: var(--primary-navy); font-family: var(--font-display); margin-bottom: 0.5rem; }
+    .pricing-period { color: var(--gray-600); font-size: 0.95rem; margin-bottom: 2rem; font-weight: 600; }
+    .pricing-features { list-style: none; margin-bottom: 2rem; text-align: left; }
+    .pricing-features li {
+      padding: 0.75rem 0;
+      padding-left: 2rem;
+      position: relative;
+      color: var(--gray-700);
+      font-weight: 600;
+    }
+    .pricing-features li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--success-green);
+      font-weight: 900;
+      font-size: 1.2rem;
+    }
+
+    /* Testimonials */
+    .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2.5rem; }
+    .testimonial-card {
+      background: var(--white);
+      padding: 2.5rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--gray-200);
+      position: relative;
+      transition: all 0.3s ease;
+    }
+    .testimonial-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+    .quote-mark {
+      font-size: 4rem;
+      color: rgba(27, 116, 209, 0.20);
+      line-height: 1;
+      position: absolute;
+      top: 1.5rem;
+      left: 1.5rem;
+    }
+    .testimonial-content { position: relative; z-index: 1; margin-bottom: 2rem; }
+    .testimonial-text {
+      font-style: italic;
+      color: var(--gray-700);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+    }
+    .rating { color: rgba(27, 116, 209, 0.85); font-size: 1.1rem; margin-bottom: 1.5rem; letter-spacing: 0.06em; }
+    .testimonial-author { display: flex; align-items: center; gap: 1rem; padding-top: 1.5rem; border-top: 1px solid var(--gray-200); }
+    .author-avatar {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, var(--primary-navy), var(--accent-blue));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-weight: 900;
+      font-size: 1.25rem;
+      font-family: var(--font-display);
+    }
+    .author-info h4 { font-size: 1.1rem; margin-bottom: 0.25rem; color: var(--primary-navy); font-weight: 900; }
+    .author-info p { font-size: 0.9rem; color: var(--gray-600); font-weight: 600; }
+
+    /* CTA Section */
+    .cta-section {
+      background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-blue) 100%);
+      color: var(--white);
+      padding: 6rem 2.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(230, 242, 255, 0.10) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .cta-container { max-width: 900px; margin: 0 auto; position: relative; z-index: 1; }
+    .cta-container h2 { color: var(--white); font-size: clamp(1.9rem, 2.2vw + 1rem, 2.75rem); margin-bottom: 1.5rem; font-weight: 900; }
+    .cta-description {
+      font-size: 1.25rem;
+      color: rgba(255, 255, 255, 0.92);
+      margin-bottom: 3rem;
+      line-height: 1.7;
+      font-weight: 500;
+      max-width: 62ch;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .cta-buttons { display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap; }
+    .cta-note { margin-top: 2.5rem; font-size: 0.95rem; color: rgba(255, 255, 255, 0.75); font-weight: 500; }
+
+    /* FAQ */
+    .faq-container { max-width: 900px; margin: 0 auto; }
+    .faq-item {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      margin-bottom: 1.25rem;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .faq-item:hover { box-shadow: var(--shadow-sm); }
+    .faq-question {
+      padding: 1.75rem 2rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 800;
+      color: var(--primary-navy);
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+    }
+    .faq-question:hover { background: var(--gray-100); }
+    .faq-toggle {
+      width: 32px;
+      height: 32px;
+      background: rgba(27, 116, 209, 0.12);
+      color: var(--primary-navy);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 900;
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
+      border: 1px solid rgba(27, 116, 209, 0.18);
+    }
+    .faq-item.active .faq-toggle { transform: rotate(45deg); }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+      color: var(--gray-700);
+      line-height: 1.7;
+      font-weight: 500;
+    }
+    .faq-item.active .faq-answer { max-height: 500px; padding: 0 2rem 1.75rem; }
+
+    /* Footer */
+    .footer { background: var(--gray-900); color: rgba(255, 255, 255, 0.8); padding: 4rem 2.5rem 2rem; }
+    .footer-grid {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+    .footer-section h3 { color: var(--white); font-size: 1.2rem; margin-bottom: 1.5rem; font-weight: 900; font-family: var(--font-display); }
+    .footer-section p { line-height: 1.7; margin-bottom: 1.5rem; font-weight: 500; }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 0.875rem; }
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.72);
+      text-decoration: none;
+      transition: color 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 600;
+    }
+    .footer-links a:hover { color: rgba(230, 242, 255, 0.95); }
+    .footer-bottom {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding-top: 2.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .hero-container { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .nav-container { flex-direction: column; gap: 1rem; }
+      .nav-actions { width: 100%; justify-content: center; }
+      .phone-link { font-size: 0.9rem; padding: 0.5rem 1rem; }
+
+      .hero { padding: 2.25rem 1.5rem 3.25rem; }
+      .hero-features { flex-direction: column; gap: 1.5rem; }
+
+      .section { padding: 4rem 1.5rem; }
+      .services-grid, .process-grid, .testimonials-grid, .pricing-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .pricing-card.featured { transform: scale(1); }
+    }
+
+    /* Loading Animation */
+    .btn.loading { opacity: 0.7; cursor: not-allowed; position: relative; }
+    .btn.loading::after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border: 2px solid transparent;
+      border-top-color: currentColor;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    @keyframes spin { to { transform: translateY(-50%) rotate(360deg); } }
+
+    /* Scroll Animations */
+    .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* CTA mobile sticky */
+    .mobile-cta {
+      position: fixed;
+      left: 1rem;
+      right: 1rem;
+      bottom: 1rem;
+      display: none;
+      gap: 0.75rem;
+      z-index: 1500;
+      padding: 0.75rem;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid rgba(10, 37, 64, 0.12);
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow-lg);
+    }
+    .mobile-cta__btn {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.9rem 1rem;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 900;
+      color: var(--primary-navy);
+      border: 1.5px solid rgba(10, 37, 64, 0.18);
+      background: var(--white);
+      font-family: var(--font-body);
+    }
+    .mobile-cta__btn--primary { background: var(--accent-blue); color: var(--white); border-color: transparent; }
+    @media (max-width: 768px) {
+      .mobile-cta { display: flex; }
+      body { padding-bottom: 96px; }
+    }
+
+    /* Réduction des animations */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { animation: none !important; transition: none !important; }
+      .fade-in { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#hero">Aller au contenu</a>
+
+  <!-- Header -->
+  <header class="header" role="banner">
+    <nav class="nav-container" role="navigation" aria-label="Navigation principale">
+      <a href="#" class="logo" aria-label="Hygia Pro Service - Accueil">
+        <div class="logo-icon">H</div>
+        <div class="logo-text">
+          <span class="brand">Hygia Pro Service</span>
+          <span class="tagline">Expert B2B - Île-de-France</span>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <a href="tel:+33776480262" class="phone-link" aria-label="Appelez-nous">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+            </path>
+          </svg>
+          07 76 48 02 62
+        </a>
+        <a href="#contact" class="btn btn-primary">Devis Gratuit</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero" role="main">
+    <div class="hero-container">
+      <div class="hero-content fade-in">
+        <p class="hero-eyebrow">Remise en état locative professionnelle B2B</p>
+        <h1>Expert en Remise en État Locative B2B</h1>
+        <p class="hero-subtitle">
+          Votre partenaire de confiance pour la remise en état rapide, fiable et traçable des logements entre deux
+          locations. Solutions dédiées aux professionnels de l'immobilier en Île-de-France.
+        </p>
+        <div class="hero-features">
+          <div class="hero-feature">
+            <div class="feature-icon">⚡</div>
+            <div class="feature-text">
+              <div class="feature-value">24-48h</div>
+              <div class="feature-label">Délai d'intervention</div>
+            </div>
+          </div>
+          <div class="hero-feature">
+            <div class="feature-icon">✓</div>
+            <div class="feature-text">
+              <div class="feature-value">100%</div>
+              <div class="feature-label">Garantie résultat</div>
+            </div>
+          </div>
+          <div class="hero-feature">
+            <div class="feature-icon">📸</div>
+            <div class="feature-text">
+              <div class="feature-value">Traçable</div>
+              <div class="feature-label">Photos avant/après</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary">Demander un devis</a>
+          <a href="#services" class="btn btn-outline">Découvrir nos services</a>
+        </div>
+      </div>
+
+      <div class="form-card fade-in" id="contact">
+        <div id="heroSuccess" class="success-alert" role="alert">
+          ✓ Merci ! Nous vous recontactons sous 24h ouvrées.
+        </div>
+        <div id="heroError" class="error-alert" role="alert" aria-live="polite"></div>
+
+        <div class="form-header">
+          <h3>Devis Gratuit en 24h</h3>
+          <p>Recevez une proposition détaillée adaptée à vos besoins</p>
+        </div>
+
+        <form id="heroForm" aria-label="Formulaire de demande de devis">
+          <div class="form-group">
+            <label for="company">Agence / Société *</label>
+            <input type="text" id="company" name="company" required aria-required="true"
+              placeholder="Nom de votre agence">
+          </div>
+          <div class="form-group">
+            <label for="contact">Contact *</label>
+            <input type="text" id="contact" name="contact" required aria-required="true" placeholder="Votre nom">
+          </div>
+          <div class="form-group">
+            <label for="email">Email professionnel *</label>
+            <input type="email" id="email" name="email" required aria-required="true" placeholder="votre@email.fr">
+          </div>
+          <div class="form-group">
+            <label for="phone">Téléphone *</label>
+            <input type="tel" id="phone" name="phone" required aria-required="true" placeholder="06 12 34 56 78">
+          </div>
+          <div class="form-group">
+            <label for="service">Type de prestation *</label>
+            <select id="service" name="service" required aria-required="true">
+              <option value="">Sélectionnez...</option>
+              <option value="remise-etat-complete">Remise en état complète</option>
+              <option value="fin-bail">Nettoyage fin de bail</option>
+              <option value="avant-relocation">Remise en état avant relocation</option>
+              <option value="apres-travaux">Remise en état après travaux</option>
+              <option value="autre">Autre / Sur mesure</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="surface">Type de bien</label>
+            <select id="surface" name="surface">
+              <option value="">Sélectionnez...</option>
+              <option value="studio-t1">Studio / T1</option>
+              <option value="t2-t3">T2 / T3</option>
+              <option value="t4-plus">T4 et plus</option>
+              <option value="maison">Maison</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Précisions</label>
+            <textarea id="message" name="message" placeholder="Décrivez brièvement vos besoins..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Recevoir mon devis gratuit</button>
+          <p class="form-note">
+            Vos données sont protégées. Réponse garantie sous 2h en jours ouvrés.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <section class="trust-bar" aria-label="Nos garanties">
+    <div class="trust-container">
+      <div class="trust-item">
+        <div class="trust-icon">🛡️</div>
+        <div class="trust-text">
+          <div class="trust-value">Assuré</div>
+          <div class="trust-label">RC Pro 2M€</div>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">🎯</div>
+        <div class="trust-text">
+          <div class="trust-value">Spécialisé</div>
+          <div class="trust-label">Exclusif B2B</div>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">📋</div>
+        <div class="trust-text">
+          <div class="trust-value">Traçable</div>
+          <div class="trust-label">Rapport détaillé</div>
+        </div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-icon">⚡</div>
+        <div class="trust-text">
+          <div class="trust-value">Rapide</div>
+          <div class="trust-label">Délais garantis</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Nos Prestations</span>
+        <h2>Services Professionnels B2B</h2>
+        <p class="section-description">
+          Des solutions complètes et standardisées, conçues spécifiquement pour répondre aux exigences des
+          professionnels de l'immobilier.
+        </p>
+      </div>
+      <div class="services-grid">
+        <article class="service-card fade-in">
+          <div class="service-icon">🏠</div>
+          <h3>Remise en État Fin de Bail</h3>
+          <p class="service-description">
+            Prestation complète pour remettre le logement en état conforme après le départ d'un locataire.
+          </p>
+          <ul class="service-features">
+            <li>Nettoyage approfondi toutes surfaces</li>
+            <li>Désinfection sanitaires et cuisine</li>
+            <li>Traitement sols et vitres</li>
+            <li>Photos avant/après systématiques</li>
+            <li>Rapport d'intervention détaillé</li>
+          </ul>
+        </article>
+
+        <article class="service-card fade-in">
+          <div class="service-icon">✨</div>
+          <h3>Remise en État Avant Relocation</h3>
+          <p class="service-description">
+            Optimisez vos délais de relocation avec un bien impeccable et prêt pour les visites.
+          </p>
+          <ul class="service-features">
+            <li>Intervention sous 24-48h</li>
+            <li>Valorisation du bien locatif</li>
+            <li>Coordination état des lieux</li>
+            <li>Prestations complémentaires disponibles</li>
+            <li>Facturation transparente</li>
+          </ul>
+        </article>
+
+        <article class="service-card fade-in">
+          <div class="service-icon">🔧</div>
+          <h3>Remise en État Après Travaux</h3>
+          <p class="service-description">
+            Nettoyage post-travaux pour un bien prêt à être habité ou visité immédiatement.
+          </p>
+          <ul class="service-features">
+            <li>Évacuation poussières et résidus</li>
+            <li>Nettoyage grandes surfaces</li>
+            <li>Dégraissage et finitions</li>
+            <li>Intervention coordonnée</li>
+            <li>Délais maîtrisés</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Value Proposition -->
+  <section class="value-prop">
+    <div class="value-container">
+      <div class="section-header fade-in">
+        <span class="section-label">Notre Différence</span>
+        <h2 style="color: var(--white);">Pourquoi les Professionnels Nous Choisissent</h2>
+        <p class="section-description" style="color: rgba(255, 255, 255, 0.9);">
+          Une approche spécifiquement conçue pour les besoins des agences immobilières, administrateurs de biens et
+          gestionnaires locatifs.
+        </p>
+      </div>
+      <div class="value-grid">
+        <div class="value-item fade-in">
+          <div class="value-number">01</div>
+          <h3 class="value-title">Délais Garantis</h3>
+          <p class="value-description">
+            Intervention sous 24 à 48h pour réduire vos délais de vacance locative et maximiser votre rentabilité.
+          </p>
+        </div>
+        <div class="value-item fade-in">
+          <div class="value-number">02</div>
+          <h3 class="value-title">Process Standardisé</h3>
+          <p class="value-description">
+            Méthodologie éprouvée et checklist systématique pour garantir une qualité constante sur chaque intervention.
+          </p>
+        </div>
+        <div class="value-item fade-in">
+          <div class="value-number">03</div>
+          <h3 class="value-title">Traçabilité Complète</h3>
+          <p class="value-description">
+            Documentation photographique avant/après et rapport d'intervention transmissible à vos clients
+            propriétaires.
+          </p>
+        </div>
+        <div class="value-item fade-in">
+          <div class="value-number">04</div>
+          <h3 class="value-title">Tarification Claire</h3>
+          <p class="value-description">
+            Forfaits transparents et prévisibles pour faciliter vos budgets et éviter les mauvaises surprises.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="section section-alt" id="process">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Notre Méthode</span>
+        <h2>Un Process Simple et Efficace</h2>
+        <p class="section-description">
+          De votre demande à la livraison du bien, chaque étape est optimisée pour votre satisfaction.
+        </p>
+      </div>
+      <div class="process-grid">
+        <article class="process-step fade-in">
+          <div class="step-number">1</div>
+          <h3>Contact & Évaluation</h3>
+          <p>
+            Vous nous contactez, nous évaluons vos besoins. Devis détaillé transmis sous 24h en jours ouvrés.
+          </p>
+        </article>
+        <article class="process-step fade-in">
+          <div class="step-number">2</div>
+          <h3>Planification</h3>
+          <p>
+            Coordination des accès et planification de l'intervention selon vos impératifs de délais.
+          </p>
+        </article>
+        <article class="process-step fade-in">
+          <div class="step-number">3</div>
+          <h3>Intervention</h3>
+          <p>
+            Exécution selon notre process standardisé avec prise de photos avant et après intervention.
+          </p>
+        </article>
+        <article class="process-step fade-in">
+          <div class="step-number">4</div>
+          <h3>Livraison & Rapport</h3>
+          <p>
+            Transmission du rapport d'intervention complet avec documentation photographique détaillée.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="section" id="tarifs">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Tarification</span>
+        <h2>Forfaits Professionnels</h2>
+        <p class="section-description">
+          Tarification claire et transparente pour faciliter vos budgets prévisionnels.
+        </p>
+      </div>
+      <div class="pricing-grid">
+        <article class="pricing-card fade-in">
+          <h3>Studio / T1</h3>
+          <div class="pricing-amount">290€</div>
+          <p class="pricing-period">À partir de • HT</p>
+          <ul class="pricing-features">
+            <li>Remise en état complète</li>
+            <li>Nettoyage toutes surfaces</li>
+            <li>Photos avant/après</li>
+            <li>Rapport d'intervention</li>
+            <li>Délai 24-48h</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-block">Demander un devis</a>
+        </article>
+
+        <article class="pricing-card featured fade-in">
+          <div class="pricing-badge">Le plus populaire</div>
+          <h3>T2 / T3</h3>
+          <div class="pricing-amount">350€</div>
+          <p class="pricing-period">À partir de • HT</p>
+          <ul class="pricing-features">
+            <li>Remise en état complète</li>
+            <li>Nettoyage toutes surfaces</li>
+            <li>Photos avant/après</li>
+            <li>Rapport d'intervention</li>
+            <li>Délai 24-48h</li>
+            <li>Options premium disponibles</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-block">Demander un devis</a>
+        </article>
+
+        <article class="pricing-card fade-in">
+          <h3>T4 et plus</h3>
+          <div class="pricing-amount">420€</div>
+          <p class="pricing-period">À partir de • HT</p>
+          <ul class="pricing-features">
+            <li>Remise en état complète</li>
+            <li>Nettoyage toutes surfaces</li>
+            <li>Photos avant/après</li>
+            <li>Rapport d'intervention</li>
+            <li>Délai adapté</li>
+            <li>Devis personnalisé</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-block">Demander un devis</a>
+        </article>
+      </div>
+
+      <p style="text-align: center; margin-top: 2.5rem; color: var(--gray-600);">
+        <strong>Options complémentaires :</strong> Désinfection express, débarras léger, traitement spécifique. Tarifs
+        sur demande.
+      </p>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section section-alt" id="temoignages">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">Témoignages</span>
+        <h2>Ils Nous Font Confiance</h2>
+        <p class="section-description">
+          L'avis de nos clients professionnels, agences immobilières et gestionnaires de biens.
+        </p>
+      </div>
+
+      <div class="testimonials-grid">
+        <article class="testimonial-card fade-in">
+          <div class="quote-mark">"</div>
+          <div class="testimonial-content">
+            <div class="rating">★★★</div>
+            <p class="testimonial-text">
+              "Hygia Pro Service est devenu notre partenaire privilégié pour toutes nos remises en état. Délais
+              respectés, qualité irréprochable et une vraie compréhension des contraintes de notre métier. Nous avons
+              réduit nos délais de relocation de 30%."
+            </p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">MC</div>
+            <div class="author-info">
+              <h4>Marie Carpentier</h4>
+              <p>Directrice d'Agence - Immoval, Paris 17e</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card fade-in">
+          <div class="quote-mark">"</div>
+          <div class="testimonial-content">
+            <div class="rating">★★★★</div>
+            <p class="testimonial-text">
+              "Professionnalisme exemplaire et rapport qualité-prix imbattable. Les rapports photographiques nous
+              permettent de justifier l'état du bien auprès de nos propriétaires. Un vrai gain de temps et de
+              crédibilité."
+            </p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">JD</div>
+            <div class="author-info">
+              <h4>Jean Dubois</h4>
+              <p>Gestionnaire de Patrimoine - Val Gestion</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="testimonial-card fade-in">
+          <div class="quote-mark">"</div>
+          <div class="testimonial-content">
+            <div class="rating">★★★★</div>
+            <p class="testimonial-text">
+              "Réactivité remarquable et flexibilité appréciable. Nous gérons plus de 80 logements et Hygia Pro s'adapte
+              parfaitement à nos contraintes de planning. Les interventions sont systématiquement à la hauteur de nos
+              attentes."
+            </p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">SL</div>
+            <div class="author-info">
+              <h4>Sophie Laurent</h4>
+              <p>Responsable Gestion Locative - Nexity</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-label">FAQ</span>
+        <h2>Questions Fréquentes</h2>
+        <p class="section-description">
+          Tout ce que vous devez savoir sur nos services et notre fonctionnement.
+        </p>
+      </div>
+
+      <div class="faq-container">
+        <article class="faq-item fade-in">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <span>Quels sont vos délais d'intervention ?</span>
+            <div class="faq-toggle">+</div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Nous intervenons sous 24 à 48h pour toute demande en Île-de-France. Pour les planifications standards,
+              nous nous adaptons à votre agenda avec une grande flexibilité. Notre objectif est de minimiser vos délais
+              de vacance locative.
+            </p>
+          </div>
+        </article>
+
+        <article class="faq-item fade-in">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <span>Comment se déroule une intervention type ?</span>
+            <div class="faq-toggle">+</div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Chaque intervention suit un process standardisé : prise de photos avant, remise en état selon notre
+              checklist qualité, contrôle final, photos après et transmission d'un rapport détaillé avec l'ensemble de
+              la documentation photographique.
+            </p>
+          </div>
+        </article>
+
+        <article class="faq-item fade-in">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <span>Proposez-vous des tarifs préférentiels pour volumes ?</span>
+            <div class="faq-toggle">+</div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Oui, nous proposons des tarifs préférentiels et des conditions avantageuses pour nos partenaires
+              récurrents. Contactez-nous pour établir un partenariat adapté au volume de votre parc locatif.
+            </p>
+          </div>
+        </article>
+
+        <article class="faq-item fade-in">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <span>Êtes-vous assurés ?</span>
+            <div class="faq-toggle">+</div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Oui, nous disposons d'une assurance Responsabilité Civile Professionnelle couvrant nos interventions à
+              hauteur de 2 millions d'euros. Une attestation peut vous être fournie sur demande.
+            </p>
+          </div>
+        </article>
+
+        <article class="faq-item fade-in">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <span>Intervenez-vous sur toute l'Île-de-France ?</span>
+            <div class="faq-toggle">+</div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Oui, notre zone d'intervention couvre Paris et toute l'Île-de-France. Nous organisons nos tournées pour
+              optimiser les délais et garantir une intervention rapide sur l'ensemble du territoire francilien.
+            </p>
+          </div>
+        </article>
+
+        <article class="faq-item fade-in">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <span>Comment se passe la facturation ?</span>
+            <div class="faq-toggle">+</div>
+          </div>
+          <div class="faq-answer">
+            <p>
+              Nous établissons un devis détaillé avant chaque intervention. La facturation intervient après validation
+              du travail effectué. Nous acceptons les paiements par virement bancaire et proposons des conditions de
+              règlement adaptées à nos partenaires professionnels.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="cta-container fade-in">
+      <h2>Prêt à Optimiser Votre Gestion Locative ?</h2>
+      <p class="cta-description">
+        Rejoignez les agences immobilières et gestionnaires de biens qui nous font confiance pour leurs remises en état
+        locatives en Île-de-France.
+      </p>
+      <div class="cta-buttons">
+        <a href="tel:+33123456789" class="btn btn-primary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+            </path>
+          </svg>
+          Appelez-nous : 07 76 48 02 62
+        </a>
+        <a href="#contact" class="btn btn-outline">Demander un devis gratuit</a>
+      </div>
+      <p class="cta-note">
+        Devis gratuit • Réponse sous 24h en jours ouvrés • Sans engagement
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3>Hygia Pro Service</h3>
+        <p>
+          Expert en remise en état locative professionnelle B2B pour agences immobilières et gestionnaires de biens en
+          Île-de-France.
+        </p>
+        <p style="margin-top: 1.5rem;">
+          <strong>Zone d'intervention :</strong><br>
+          Paris et toute l'Île-de-France
+        </p>
+      </div>
+      <div class="footer-section">
+        <h3>Services</h3>
+        <ul class="footer-links">
+          <li><a href="#services">Remise en état fin de bail</a></li>
+          <li><a href="#services">Remise en état avant relocation</a></li>
+          <li><a href="#services">Remise en état après travaux</a></li>
+          <li><a href="#tarifs">Tarifs & forfaits</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Informations</h3>
+        <ul class="footer-links">
+          <li><a href="#process">Notre méthode</a></li>
+          <li><a href="#temoignages">Témoignages clients</a></li>
+          <li><a href="#faq">Questions fréquentes</a></li>
+          <li><a href="#">Mentions légales</a></li>
+          <li><a href="#">Politique de confidentialité</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <ul class="footer-links">
+          <li>
+            <a href="tel:+33123456789">
+              📞 07 76 48 02 62
+            </a>
+          </li>
+          <li>
+            <a href="/cdn-cgi/l/email-protection#92f1fdfce6f3f1e6d2faebf5fbf3e2e0fde1f7e0e4fbf1f7bcf4e0">
+              ✉️ <span class="__cf_email__"
+                data-cfemail="4f2c20213b2e2c3b61273628262e3f3d203c2a3d39262c2a0f28222e2623612c2022">[email&#160;protected]</span>
+            </a>
+          </li>
+          <li>🕒 Lun-Ven : 8h-19h</li>
+          <li>🕒 Sam : 9h-17h</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Hygia Pro Service - Micro-entreprise | SIRET: XXX XXX XXX XXXXX | RC Pro: 2M€</p>
+    </div>
+  </footer>
+
+  <div class="mobile-cta" role="region" aria-label="Actions rapides">
+    <a class="mobile-cta__btn" href="tel:+33776480262">Appeler</a>
+    <a class="mobile-cta__btn mobile-cta__btn--primary" href="#contact">Devis</a>
+  </div>
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const hasEmailJs = !!window.emailjs;
+    if (hasEmailJs) {
+      emailjs.init({ publicKey: "l3lDTqcywQrchb1B9" });
+    } else {
+      console.warn("EmailJS n'a pas chargé (emailjs undefined). Le site reste visible, mais l'envoi du formulaire ne fonctionnera pas.");
+    }
+
+    const form = document.getElementById("heroForm");
+    const successAlert = document.getElementById("heroSuccess");
+    const errorAlert = document.getElementById("heroError");
+
+    if (form) {
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const btn = form.querySelector('button[type="submit"]');
+        if (!btn) return;
+
+        if (successAlert) successAlert.classList.remove("show");
+        if (errorAlert) { errorAlert.classList.remove("show"); errorAlert.textContent = ""; }
+
+        if (!hasEmailJs) {
+          if (errorAlert) {
+            errorAlert.textContent = "Le service d’envoi n’est pas disponible pour le moment. Merci de réessayer plus tard ou de nous appeler.";
+            errorAlert.classList.add("show");
+          }
+          return;
+        }
+
+        btn.disabled = true;
+        btn.classList.add("loading");
+        btn.textContent = "Envoi en cours...";
+
+        emailjs.sendForm("hygia-devis", "template_g0zzjp7", form)
+          .then(() => {
+            if (successAlert) successAlert.classList.add("show");
+            form.reset();
+
+            btn.disabled = false;
+            btn.classList.remove("loading");
+            btn.textContent = "Recevoir mon devis gratuit";
+
+            setTimeout(() => {
+              if (successAlert) successAlert.classList.remove("show");
+            }, 5000);
+          })
+          .catch((err) => {
+            console.error("EmailJS error:", err);
+
+            if (errorAlert) {
+              errorAlert.textContent = "Une erreur est survenue lors de l’envoi. Merci de réessayer dans quelques instants.";
+              errorAlert.classList.add("show");
+            }
+
+            btn.disabled = false;
+            btn.classList.remove("loading");
+            btn.textContent = "Recevoir mon devis gratuit";
+          });
+      });
+    }
+
+    // FAQ
+    document.querySelectorAll(".faq-question").forEach((question) => {
+      question.addEventListener("click", function () {
+        const faqItem = this.closest(".faq-item");
+        if (!faqItem) return;
+        const isActive = faqItem.classList.contains("active");
+        document.querySelectorAll(".faq-item").forEach((item) => {
+          item.classList.remove("active");
+          const q = item.querySelector(".faq-question");
+          if (q) q.setAttribute("aria-expanded", "false");
+        });
+        if (!isActive) {
+          faqItem.classList.add("active");
+          this.setAttribute("aria-expanded", "true");
+        }
+      });
+    });
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        const href = this.getAttribute("href");
+        if (!href || href === "#") return;
+        const target = document.querySelector(href);
+        if (!target) return;
+        e.preventDefault();
+        const header = document.querySelector(".header");
+        const offset = header ? header.offsetHeight : 0;
+        window.scrollTo({
+          top: target.offsetTop - offset,
+          behavior: "smooth",
+        });
+      });
+    });
+
+    // Animations scroll: si IntersectionObserver indisponible, on affiche tout
+    const revealAll = () => {
+      document.querySelectorAll(".fade-in").forEach((el) => el.classList.add("visible"));
+    };
+
+    if (!("IntersectionObserver" in window)) {
+      revealAll();
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) entry.target.classList.add("visible");
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
+  });
+  </script>
+</body>
+</html>
